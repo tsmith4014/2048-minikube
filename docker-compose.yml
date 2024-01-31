@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  2048-app:
+    build: ./2048-app 
+    image: tsmith4014/2048-app
+    ports:
+      - "${PORT_BACKEND}:80"
+    environment:
+      PORT_BACKEND: ${PORT_BACKEND}

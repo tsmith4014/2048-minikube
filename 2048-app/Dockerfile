@@ -1,6 +1,9 @@
 # Use a base image with Nginx installed
 FROM nginx:alpine
 
+# Define build argument for the port
+ARG PORT_BACKEND=80
+
 # Copy the application to the Nginx directory
 COPY . /usr/share/nginx/html
 
